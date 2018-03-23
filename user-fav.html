@@ -1,0 +1,212 @@
+<html>
+
+    <head>
+        <title>John Shepard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="justifiedGallery.min.css">
+        <link rel="stylesheet" type="text/css" href="user-fav-style.css">
+        <link rel="stylesheet" type="text/css" href="tab-style.css">
+        <script type="text/javascript" src="jQuery.js"></script>
+        <script type="text/javascript" src="tab-script.js"></script>
+        <script type="text/javascript" src="jquery.justifiedGallery.min.js"></script>
+
+        
+        <style>
+            .fav-tab {
+                color: black;
+                background-color: rgba(255, 118, 0, 0.77);
+            }
+            
+            * {box-sizing: border-box}
+            
+        
+        
+        /* Style the tab */
+        div.tab {
+            float: left;
+            width: 14%;
+            height: 100%;
+        }
+
+        /* Style the buttons inside the tab */
+        div.tab button {
+            display: block;
+            color: white;
+            background-color: inherit;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+            text-shadow: 0 0 10px #ff5800, 0 0 20px #ef6704;
+        }
+
+        /* Create an active/current "tab button" class */
+        div.tab button.active {
+            background: linear-gradient(to right, #ff8900 30%, rgba(0, 0, 0, 0) 75%);
+            color: black;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            width: 85%;
+            border-left: none;
+        }
+        </style>
+
+    </head>
+    
+    <body>
+    
+        <div id="top-bar" style="position: fixed;">
+            <a id="topBar-logo" href="user_home.html" style="height: 60px; float: left; padding-top: 0px; padding-bottom:0px;"><img src="Media/logo.png" style="height: 100%;"></a>
+            <div id="openNav-btn" onclick="openNav()">&#9776;</div>
+            <a class="left-navs" href="user_home.html">Home</a>
+            <a class="left-navs" href="#">Browse</a>
+            <a class="left-navs" href="#">About</a>
+            <a class="left-navs" href="#">Contact Us</a>
+            
+            <div class="dropdown right-navs">
+                <button class="dropbtn" style="font-size:20px"><i class="fa fa-user-circle"></i> John Shepard <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="profile_settings.html">Profile settings</a>
+                    <a href="acc_settings.html">Account settings</a>
+                    <a href="main.html">Sign out</a>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="user_home.html">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </div>
+        
+        <div id="tab-bar">
+            <div id="tab-div">
+                <a href="user_home.html" onmouseover="tabHover('.main-tab');" onmouseout="tabHoverOut('.main-tab')">
+                    <div class="main-tab"><span>Main</span></div>
+                </a>
+                <a href="user-gallery.html" onmouseover="tabHover('.gallery-tab');" onmouseout="tabHoverOut('.gallery-tab')">
+                    <div class="gallery-tab"><span>Gallery</span></div>
+                </a>
+                <div class="fav-tab" style="color: black; background-color: rgba(255, 118, 0, 0.77);"><span>Favorites</span></div>
+            </div>
+            
+             <div id="fav-button">
+                <button class="gbtn">Edit Page</button>
+            </div>
+        </div>
+        
+        <div class="tab">
+              <button class="tablinks" onclick="openSection(event, 'All')" id="defaultOpen">All</button>
+              <button class="tablinks" onclick="openSection(event, 'Featured')">Featured</button>
+              <button class="tablinks" onclick="openSection(event, 'DigitalArt')">Digital Art</button>
+              <button class="tablinks" onclick="openSection(event, 'AnimeManga')">Anime &amp; Manga</button>
+              <button class="tablinks" onclick="openSection(event, 'Photography')">Photography</button>
+            </div>
+
+            <div id="All" class="tabcontent justified-gallery">
+             
+                <a href="Images/eva_by_quirkilicious-d6owsv2.jpg"><img alt="abc" class="gallery-img" src="Images/eva_by_quirkilicious-d6owsv2.jpg"></a>
+                <a href="main.html"><img class="gallery-img" src="Images/it_s_high_noon_by_quirkilicious-da2zvwt.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/stormborn_by_quirkilicious-d620llq.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/little_lion_by_quirkilicious-d609dzv.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/winter_is_coming_by_quirkilicious-d4vurwt.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/this_magic_moss_by_whiluna-d8ygn9z.png"></a>
+                <a href="#"><img class="gallery-img" src="Images/tribute_to_oum_by_quirkilicious-d8m0758.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/have_a_day_by_dragon_shark-db7jpyw.png"></a>
+                <a href="#"><img class="gallery-img" src="Images/claymore___clare_and_prisc_by_moemichan-d4yllpz.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/claymore___marked_for_death_by_dedefox-d5paij2.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/comm__zelda_by_amphispiza-db8ptok.png"></a>
+                <a href="#"><img class="gallery-img" src="Images/death_s_embrace_by_quirkilicious-d8rlhdo.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/claymore_dauf_by_gooloo0_o-d32nyfn.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/_c__antares_by_sickrogue-dbarh5x.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/winged_mirages_by_quirkilicious-dackc9a.jpg"></a>
+                <a href="#"><img class="gallery-img" src="Images/dusk_by_the_stream_by_tamberella-d9r1hkj.jpg"></a>
+                  
+            </div>
+
+            <div id="Featured" class="tabcontent">
+               
+            </div>
+
+            <div id="DigitalArt" class="tabcontent">
+              
+            </div>
+
+            <div id="AnimeManga" class="tabcontent">
+              
+            </div>
+
+            <div id="Photography" class="tabcontent">
+              
+            </div>
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        
+        <script type="text/javascript">
+            function openSection(evt, sectionName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(sectionName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            
+            $('#All').justifiedGallery({
+            rowHeight : 200,
+            lastRow : 'justify',
+            margins : 20,
+            randomize : true,
+            maxRowHeight : 300
+        });
+            
+        window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+            
+            function topFunction() {
+                $('html, body').animate({ scrollTop: 0 });
+            }
+            
+                            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        
+    </body>
+</html>

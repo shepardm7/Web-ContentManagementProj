@@ -1,0 +1,259 @@
+.gallery-img {
+    box-shadow: 1px 1px 5px black;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+#gallery-buttons {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    width: 400px;
+    height; 60px;
+}
+
+.gbtn {
+    cursor: pointer;
+    float: right;
+    outline: none;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 15px 0 15px;
+    padding: 0 10px 0 10px;
+    color: black;
+    border-radius: 10px;
+    background: orange; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #ff7600, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ff7600, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ff7600, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ff7600, orange); /* Standard syntax (must be last) */
+    box-shadow: 1px 1px 5px #777777;
+}
+
+#gallery-buttons .gbtn:hover {
+    opacity: 0.9;
+}
+
+#gallery-buttons .gbtn:active {
+    box-shadow: 0px 0px 5px #777777;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+    box-shadow: 0 0 10px grey;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background: #6d6d6d; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #6d6d6d, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #6d6d6d, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #6d6d6d, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #6d6d6d, black); /* Standard syntax (must be last) */
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    margin-top: -10px;
+    margin-right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fileUpload {
+    line-height: 60px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+    height: 60px;
+    width: 160px;
+    background-color: darkorange;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.fileUpload .upload {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.btn-primary span {
+    
+}
+
+#fileupload-container {
+    padding: 30px 0 30px 0;
+    margin: 30px auto 10px auto;
+    box-sizing: border-box;
+    width: 90%;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.37);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+#upload-title {
+    color: black;
+    display: block;
+    background-color: white;
+    margin: auto;
+    height: 25px;
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#upload-description {
+    margin: 0 auto 10px auto;
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#upload-title input {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-bottom: 1px dotted;
+}
+
+#upload-description textarea {
+    width: 100%;
+    height: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#upload-description textarea:focus {
+    height: 160px;
+}
+
+
+#file-submitBtn {
+    height: 50px;
+    width: 20%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    outline: none;
+    background: orange; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #ff7600, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ff7600, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ff7600, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ff7600, orange); /* Standard syntax (must be last) */
+    border-right-color: #ff7600;
+    border-bottom-color: #ff7600;
+    border-top-color: orange;
+    border-left-color: orange;
+}
+
+#search-form {  
+    margin: 0 0 5px 0;
+    position: absolute;
+    bottom: 0px;
+    left: 320px;
+}
+#search-form input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid darkorange;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.65);
+    background-image: url('Media/searchIcon.png');
+    background-size: 30px 30px;
+    background-position: 3px 3px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search-form input[type=text]:focus {
+    width: 100%;
+    box-shadow: 0 0 10px orange;
+}
+
+#search-form input[type=text]::-webkit-input-placeholder {    
+    color: rgba(255, 255, 255, 0.67);
+}
+
+#search-form input[type=text]::-moz-placeholder {    
+    color: rgba(255, 255, 255, 0.67);
+}
+
+#search-form input[type=text]::-ms-input-placeholder {    
+    color: rgba(255, 255, 255, 0.67);
+}

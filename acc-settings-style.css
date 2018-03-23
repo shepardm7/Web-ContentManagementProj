@@ -1,0 +1,69 @@
+#padding-div {
+    padding-bottom: 90px;
+}
+#as-container {
+    box-sizing: border-box;
+    margin: 0 auto 0 auto;
+    padding: 30px 40px 30px 40px;
+    border: 1px black;
+    width: 50%;
+    background-color: rgba(128, 128, 128, 0.32);
+    border-radius: 10px;
+    border: 1px solid #414141;
+}
+
+#as-form {
+    margin: auto;
+    width: 70%;
+    padding: 0 30px 0 30px;
+    box-sizing: border-box;
+}
+
+#as-container .as-input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.52);
+    box-shadow: 2px 1px 2px black;
+    margin-bottom: 10px;
+}
+
+#as-container label {
+    margin-bottom: 10px;
+    color: #d9d9d9;
+    text-shadow: 2px 1px 5px black;
+}
+
+#formBtn-group {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-btns {
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10px 0 10px;
+    outline: none;
+    background: orange; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #ff7600, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ff7600, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ff7600, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ff7600, orange); /* Standard syntax (must be last) */
+    border-right-color: #ff7600;
+    border-bottom-color: #ff7600;
+    border-top-color: orange;
+    border-left-color: orange;
+    cursor: pointer;
+}
+
+#formBtn-group button a {
+    color: black;
+    text-decoration: none;

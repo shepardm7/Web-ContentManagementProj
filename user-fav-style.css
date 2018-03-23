@@ -1,0 +1,42 @@
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+#fav-button {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    width: 400px;
+    height; 60px;
+}
+
+.gbtn {
+    cursor: pointer;
+    float: right;
+    outline: none;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 15px 0 15px;
+    padding: 0 10px 0 10px;
+    color: black;
+    border-radius: 10px;
+    background: orange; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #ff7600, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ff7600, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ff7600, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ff7600, orange); /* Standard syntax (must be last) */
+    box-shadow: 1px 1px 5px #777777;
+}
+
+#fav-button .gbtn:hover {
+    opacity: 0.9;
+}
+
+#fav-button .gbtn:active {
+    box-shadow: 0px 0px 5px #777777;
+}

@@ -1,0 +1,338 @@
+<html>
+    <head>
+        <title>Art Society</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="jQuery.js"></script>
+        <style>
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 4px;
+            }
+
+            /* Set a style for all buttons */
+            .login-buttons {
+                font-family: 'Acme', sans-serif;
+                border-radius: 5px;
+                background-color: #ff7e0c;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .login-buttons:hover {
+                opacity: 0.8;
+            }
+
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+                font-family: 'Acme', sans-serif;
+                border-radius: 5px;
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            .container {
+                color: white;
+                text-shadow: 2px 2px 5px #363636;
+                background: #6d6d6d; /* For browsers that do not support gradients */    
+                background: -webkit-linear-gradient(left top, #6d6d6d, black); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(bottom right, #6d6d6d, black); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(bottom right, #6d6d6d, black); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to bottom right, #6d6d6d, black); /* Standard syntax (must be last) */
+                padding: 16px;
+            }
+            
+            .container a{
+                text-decoration: none;
+                color: #b7b7b7;
+            }
+            
+            .container a:hover{
+                text-shadow: 0 0 3px #e5e5e5;
+            }
+
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+
+            /* The Modal (background) */
+            .modal {
+                
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 900px; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                padding-top: 60px;
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+                background: #6d6d6d; /* For browsers that do not support gradients */    
+                background: -webkit-linear-gradient(left top, #6d6d6d, black); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(bottom right, #6d6d6d, black); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(bottom right, #6d6d6d, black); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to bottom right, #6d6d6d, black); /* Standard syntax (must be last) */
+                margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+/*                border: 1px solid #888;*/
+                width: 40%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button (x) */
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+                text-shadow: 0px 0px 2px #a0a0a0;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+            /* Add Zoom Animation */
+            .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
+
+            @-webkit-keyframes animatezoom {
+                from {-webkit-transform: scale(0)} 
+                to {-webkit-transform: scale(1)}
+            }
+
+            @keyframes animatezoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+            }
+
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.psw {
+                   display: block;
+                   float: none;
+                }
+                .cancelbtn {
+                   width: 100%;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="top-logo-bar">
+            <a href="main.html"><div><img src="Media/logo.png"><p id="logo-text">rt Society</p></div></a>
+            <p id="welcome-text">Welcome to art society</p>
+        </div>
+        <div id="top-bar">
+            <div id="openNav-btn" onclick="openNav()">&#9776;</div>
+            <a class="left-navs" href="main.html">Home</a>
+            <a class="left-navs" href="#">Browse</a>
+            <a class="left-navs" href="#">About</a>
+            <a class="left-navs" href="#">Contact Us</a>
+            
+            <a class="right-navs sign-up" href="">Sign up</a>
+            <a class="right-navs" style="cursor: pointer;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log in</a>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="main.html">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div id="padding-div"></div>
+        <div id="under-glow"></div>
+        
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Join Art Society</h1>
+                <p>And share your creation with the world</p>
+          </div>
+        </div>
+        
+        <div id="id01" class="modal" style="z-index:6;">
+  
+          <form class="modal-content animate" action="user_home.html">
+
+            <div class="container">
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button class="login-buttons" type="submit">Login</button>
+              <input type="checkbox" checked="checked"> Remember me
+            </div>
+
+            <div class="container">
+              <button class="login-buttons cancelbtn" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+              <span class="psw"><a href="#">Forgot password?</a></span>
+            </div>
+          </form>
+        </div>
+        
+        <div class="title-div">
+            <p>What's Hot!</p>
+        </div>
+        
+        <div id="hot-div">
+            <table align="center">
+                <tr>
+                    <td class="big-img" rowspan="2" colspan="2"><div style="background-image: url('Images/devoted_by_kawacy-db7n2bd.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/_c__antares_by_sickrogue-dbarh5x.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/312full.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/light_and_shadow_by_kawacy-db2i3g4.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/little_dragon_by_amenlona-db7ohn2.png');"></div></td>
+                    <td id="singular-img" rowspan="3" colspan="3"><div style="background-image: url('Images/luo_by_begasuslu-dbappg0.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/have_a_day_by_dragon_shark-db7jpyw.png');"></div></td>
+                </tr>
+                <tr>
+                    <td class="small-img"><div style="background-image: url('Images/mononoketale_by_dav_19-dba6j48.gif');"></div></td>
+                    <td class="big-img" rowspan="2" colspan="2"><div style="background-image: url('Images/elizabeth_by_redchetgreen-db6hwq3.png');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/dusk_by_the_stream_by_tamberella-d9r1hkj.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/flash_zootopia_0.png');"></div></td>
+                </tr>
+                
+                <tr>
+                    <td class="small-img"><div style="background-image: url('Images/Toothless_Gallery_httyd2_3wm.jpg');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/this_magic_moss_by_whiluna-d8ygn9z.png');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/partners_in_space_by_ebonytails-dbasa4r.png');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/skye_by_tamberella-d5nobt4.png');"></div></td>
+                    <td class="small-img"><div style="background-image: url('Images/claymore_dauf_by_gooloo0_o-d32nyfn.jpg');"></div></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="title-div">
+            <p>Featured</p>
+        </div>
+        
+        
+        <div id="featured-div">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="Images/skye_by_tamberella-d5nobt4.png" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="Images/controlled_burn_by_tamberella-d8uuvay.jpg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="Images/dusk_by_the_stream_by_tamberella-d9r1hkj.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        
+        <div id="footer">
+            <h3>FOLLOW US ON...</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <p>©2017 ArtSociety. All rights reserved</p>
+        </div>
+        
+        <script>
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("top-bar").style.position = "fixed";
+                    document.getElementById("top-bar").style.marginTop = "-100px";
+                    document.getElementById("padding-div").style.marginTop = "100px";
+                    document.getElementById("under-glow").style.height = "1px";
+                } else {
+                    document.getElementById("top-bar").style.position = "static";
+                    document.getElementById("top-bar").style.marginTop = "0px";
+                    document.getElementById("padding-div").style.marginTop = "0px";
+                    document.getElementById("under-glow").style.height = "0px";
+                }
+                
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+            
+            function topFunction() {
+                $('html, body').animate({ scrollTop: 0 });
+            }
+            
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1} 
+                slides[slideIndex-1].style.display = "block"; 
+                setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </body>
+</html>

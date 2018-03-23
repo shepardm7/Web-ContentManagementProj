@@ -1,0 +1,157 @@
+#padding-div {
+    padding-bottom: 90px;
+}
+#ps-container {
+    box-sizing: border-box;
+    margin: 0 auto 30px auto;
+    padding: 30px 40px 30px 40px;
+    border: 1px black;
+    width: 70%;
+    background-color: rgba(128, 128, 128, 0.32);
+    border-radius: 10px;
+    border: 1px solid #414141;
+}
+
+#tab-group {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.tablinks {
+    display: inline-block;
+    margin: 0;
+}
+
+
+/* Style the tab */
+
+/* Style the buttons inside the tab */
+#tab-group button {
+    font-weight: bold;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    background: #808080; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(#808080, #585858); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#808080, #585858); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#808080, #585858); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#808080, #585858); /* Standard syntax (must be last) */
+}
+
+/* Change background color of buttons on hover */
+#tab-group button:hover {
+    background: #808080; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(#9a9a9a, #606060); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#9a9a9a, #606060); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#9a9a9a, #606060); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#9a9a9a, #606060); /* Standard syntax (must be last)*/
+}
+
+/* Create an active/current tablink class */
+#tab-group button.active {
+   background: #808080; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(#5f5f5f, #464646); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(##5f5f5f, #464646); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(##5f5f5f, #464646); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(##5f5f5f, #464646); /* Standard syntax (must be last) */
+    color: #b9b9b9;
+}
+
+#defaultOpen{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 1px solid black;
+}
+
+#lastTab {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 1px black;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.ps-inputs {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.52);
+    box-shadow: 2px 1px 2px black;
+}
+
+#formBtn-group {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-btns{
+    display: inline-block;
+    margin: 0;
+}
+
+#profile-image {
+    width: 100%;
+    text-align: center;
+}
+
+#profile-image img{
+    width: 30%;
+    display: inline-block;
+}
+
+#ps-form textarea {
+    height: 100px;
+    resize: none;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.52);
+}
+
+#ps-form label {
+    color: #d9d9d9;
+    text-shadow: 2px 1px 5px black;
+}
+
+#ps-form select {
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.52);
+    box-shadow: 2px 1px 2px black;
+}
+
+.form-btns {
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10px 0 10px;
+    outline: none;
+    background: orange; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #ff7600, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ff7600, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ff7600, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ff7600, orange); /* Standard syntax (must be last) */
+    border-right-color: #ff7600;
+    border-bottom-color: #ff7600;
+    border-top-color: orange;
+    border-left-color: orange;
+    cursor: pointer;
+}
+
+#formBtn-group button a {
+    color: black;
+    text-decoration: none;
+}

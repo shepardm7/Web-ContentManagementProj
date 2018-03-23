@@ -1,0 +1,167 @@
+<html>
+
+    <head>
+        <title>John Shepard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="tab-style.css">
+        <script type="text/javascript" src="jQuery.js"></script>        
+        <script type="text/javascript" src="tab-script.js"></script>
+
+    </head>
+    
+    <body>
+    
+        <div id="top-bar" style="position: fixed;">
+            <a id="topBar-logo" href="user_home.html" style="height: 60px; float: left; padding-top: 0px; padding-bottom:0px;"><img src="Media/logo.png" style="height: 100%;"></a>
+            <div id="openNav-btn" onclick="openNav()">&#9776;</div>
+            <a class="left-navs" href="user_home.html">Home</a>
+            <a class="left-navs" href="#">Browse</a>
+            <a class="left-navs" href="#">About</a>
+            <a class="left-navs" href="#">Contact Us</a>
+            
+            <div class="dropdown right-navs">
+                <button class="dropbtn" style="font-size:20px"><i class="fa fa-user-circle"></i> John Shepard <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="profile_settings.html">Profile settings</a>
+                    <a href="acc_settings.html">Account settings</a>
+                    <a href="main.html">Sign out</a>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="user-home.html">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </div>
+        
+        <div id="tab-bar">
+            <div id="tab-div">
+                <div class="main-tab" style="color: black; background-color: rgba(255, 118, 0, 0.77);"><span>Main</span></div>
+                <a href="user-gallery.html" onmouseover="tabHover('.gallery-tab');" onmouseout="tabHoverOut('.gallery-tab')">
+                    <div class="gallery-tab"><span>Gallery</span></div>
+                </a>
+                <a href="user-fav.html" onmouseover="tabHover('.fav-tab');" onmouseout="tabHoverOut('.fav-tab')">
+                    <div class="fav-tab"><span>Favorites</span></div>
+                </a>
+            </div>
+        </div>
+        <div class="user-home-table">
+                <div class="home-td">
+                    <div id="latest-div" class="home-div div-type1">
+                        <div class="title-container"><span>Latest Art Uploads</span></div>
+                        <table align="center">
+                            <tr>
+                                <td><div class="img-container" style="background-image: url('Images/death_s_embrace_by_quirkilicious-d8rlhdo.jpg');"></div></td>
+                                <td><div class="img-container" style="background-image: url('Images/claymore_dauf_by_gooloo0_o-d32nyfn.jpg');"></div></td>
+                                <td><div class="img-container" style="background-image: url('Images/fairy_flies_by_quirkilicious-db6ebys.jpg');"></div></td>
+                            </tr>
+                        </table>
+                        <button id="browse-gallery" class="my-button dark-btn">Browse Gallery</button>
+                        <button id="submit-art" class="my-button orange-btn">Submit Art</button>
+                    </div>
+                    <div id="favorites-div" class="home-div div-type1">
+                        <div class="title-container"><span>Favorites</span></div>
+                        <table align="center">
+                            <tr>
+                                <td><div class="img-container" style="background-image: url('Images/back_to_the_past_by_quirkilicious-db264af.jpg');"></div></td>
+                                <td><div class="img-container" style="background-image: url('Images/devoted_by_kawacy-db7n2bd.jpg');"></div></td>
+                                <td><div class="img-container" style="background-image: url('Images/hustle_by_quirkilicious-d9xi2aa.jpg');"></div></td>
+                            </tr>
+                        </table>
+                        <button id="browse-fav" class="my-button orange-btn">Browse Favorites</button>
+                    </div>
+                    
+                    <div id="followers-div" class="home-div">
+                        <div class="title-container"><span>Followers</span></div>
+                        <span>You currently don&#39;t have any followers.</span>
+                    </div>
+                    
+                </div>
+        </div>
+        
+        <div class="user-home-table">
+            <div class="home-td">
+                <div id="activity-div" class="home-div">
+                    <div class="title-container"><span>Activity</span></div>
+                    <div style="width: 100%; box-sizing: border-box; padding: 0 10px 0 10px;">
+                        <form id="activity-form" method="post" action="#">
+                            <textarea id="activity-text" placeholder="Share a status update with your followers"></textarea>
+                            <div>
+                                <input id="status-submit" class="orange-btn" type="submit" value="Post Status">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="profile-div" class="home-div">
+                <div class="title-container"><span>Art Society ID</span></div>
+                <div id="profile-img"></div>
+                <div id="user-details">
+                    <span class="username">
+                        johnshepard123
+                    </span>
+                    <span class="name">John Shepard</span>
+                    <span class="country">Canada</span>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        
+<!--
+        <script type="text/javascript">
+            $("#activity-text").focus(function(){
+                $(this).animate({height: "100px"});
+            });
+            
+            $("#activity-text").
+        </script>
+-->
+
+        <script type="text/javascript">
+            $("#activity-text").focus(function(){
+                $(this).animate({height: "10em"});
+                $("#activity-form div").css("display", "block");
+            });
+            
+            $("#activity-text").focusout(function(){
+                if(!$.trim($("#activity-text").val())) {
+                    $("#activity-form div").css("display", "none");
+                    $(this).animate({height: "30px"});
+                    $("#activity-text").val("");
+                }              
+            })
+            
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+            
+            function topFunction() {
+                $('html, body').animate({ scrollTop: 0 });
+            }
+            
+                       function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            
+        </script>
+        
+    </body>
+</html>

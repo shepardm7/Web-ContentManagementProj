@@ -1,0 +1,98 @@
+<html>
+    
+    <head>
+        <title>
+            Profile Settings
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="acc-settings-style.css">
+        <script type="text/javascript" src="jQuery.js"></script>
+    </head>
+    
+    <body>
+        
+        <div id="top-bar" style="position: fixed;">
+            <a id="topBar-logo" href="user_home.html" style="height: 60px; float: left; padding-top: 0px; padding-bottom:0px;"><img src="Media/logo.png" style="height: 100%;"></a>
+            <div id="openNav-btn" onclick="openNav()">&#9776;</div>
+            <a class="left-navs" href="user_home.html">Home</a>
+            <a class="left-navs" href="#">Browse</a>
+            <a class="left-navs" href="#">About</a>
+            <a class="left-navs" href="#">Contact Us</a>
+            
+            <div class="dropdown right-navs">
+                <button class="dropbtn" style="font-size:20px"><i class="fa fa-user-circle"></i> John Shepard <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="profile_settings.html">Profile settings</a>
+                    <a href="acc_settings.html">Account settings</a>
+                    <a href="main.html">Sign out</a>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="user_home.html">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </div>
+        
+        <div id="padding-div"></div>
+        
+        <div id="as-container">
+            <form id="as-form">
+                <label for="emailText">E-mail:</label>
+                <input id="emailText" class="as-input">
+                <label for="cEmailText">Confirm e-mail:</label>
+                <input id="cEmailText" class="as-input">
+                <label for="oPassText">Old password:</label>
+                <input id="oPassText" class="as-input">
+                <label for="passText">New password:</label>
+                <input id="passText" class="as-input">
+                <label for="cPassText">Confirm password:</label>
+                <input id="cPassText" class="as-input">
+                
+                <div id="formBtn-group">
+                    <button id="cancelBtn" class="form-btns"><a href="user_home.html">Cancel</a></button>
+                    <input id="saveBtn" class="form-btns" type="submit" value="Save">
+               </div>
+            </form>
+        </div>
+        
+        <script type="text/javascript">
+        
+             function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            
+            function openSection(evt, secName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(secName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+            
+        document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+</html>
